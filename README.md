@@ -32,3 +32,6 @@ Prilikom izrade korisceni su:
 • Truffle za testiranje
 
 
+<img src = "./src/Slike/SlikaSajta.png" width = 1000 hight = 900>
+
+
