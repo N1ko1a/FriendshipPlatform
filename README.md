@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# FriendshipPlatform
+Razvijanje decentralizovane platforme gde korisnici mogu da traže prijatelje i da prihvate zahteve za prijateljstvo od drugih korisnika.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+Ključne komponente koje treba uzeti u obzir prilikom izrade DApp-a su:
 
-### `npm start`
+• FriendshipPlatform.sol sa deployment-om na testnu mrežu: Ovo će biti Solidity
+pametni ugovor koji će upravljati procesom slanja i prihvatanja zahteva za
+prijateljstvo 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+• Web3 integracija: Front-end vaše aplikacije mora da interaguje sa pametnim
+ugovorom. Korišćenje JavaScript biblioteke kao što su Web3.js ili ethers.js se
+preporučuje. Preporučuje se setup odrađen na vežbama. Treba da instalirate Node
+JS, React JS i pokrenete React JS. Komande se na Windows-u mogu pozivati iz
+PowerShell-a (za Linux i Mac se podrazumeva korišćenje standardnih Terminal
+konzola) 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+• Testiranje: Studenti treba da istraže kako se koristi i napišu testove za svoje
+ugovore koristeći Truffle ili Hardhat 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Prilikom izrade korisceni su:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+• Solidity za smart contract
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+• React za front end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+• Ethers JS za spajanje front end-a i sol fajla
 
-### `npm run eject`
+• Truffle za testiranje
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src = "./src/Slike/SlikaSajta.png" width = 1000 hight = 900>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
