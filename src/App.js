@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import abi from './contract.json';
 import './App.css';
 const ethers = require("ethers");
-const contractAddress = '0x6117D2C08f35371CBdB694215d5bDaa6cf5C6169'; // Replace with the actual contract address
+const contractAddress = '0xAc3D2089e57bf5402415a1aaE45F6123b9c22711'; 
 
 function App() {
   const [connectedContract, setConnectedContract] = useState(null);
@@ -13,12 +13,29 @@ function App() {
   const [provider, setProvider] = useState(null);
   const [userData, setUserData] = useState(null);
 
-  useEffect(() => {
+  useEffect(() => { 
+    if (connectedContract) {
+      connectedContract.on("NewUserRegistered", (userAddress, name) => {
+        const alertMessage = `New user registered:\nAddress: ${userAddress}\nName: ${name}`;
+        window.alert(alertMessage);
+      });
+  
+      connectedContract.on("FriendRequestSent", (from, to) => {
+        const alertMessage = `Friend request sent:\nFrom: ${from}\nTo: ${to}`;
+        window.alert(alertMessage);
+      });
+  
+      connectedContract.on("FriendRequestAccepted", (from, to) => {
+        const alertMessage = `Friend request accepted:\nFrom: ${from}\nTo: ${to}`;
+        alert(alertMessage);
+      });
+    }
     if (window.ethereum) {
       const newProvider = new ethers.BrowserProvider(window.ethereum);
       setProvider(newProvider);
     }
-  }, []);
+  }, [connectedContract]);
+  
 
   const connect = async () => {
     if (!provider) {
